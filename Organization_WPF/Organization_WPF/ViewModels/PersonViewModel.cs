@@ -14,6 +14,7 @@ namespace Organization_WPF.ViewModels
     public class PersonViewModel : INotifyPropertyChanged
     {
         PersonService PersonService;
+       
         public PersonViewModel()
         {
             //create the controller instance (singleton)
@@ -26,7 +27,8 @@ namespace Organization_WPF.ViewModels
             _personCollection = PersonService.PersonList;
             _currentPerson = new Person();
 
-           
+            PersonService.PersonServiceCollectionChanged += PSCollectionChanged;
+
             _saveCommand = new RelayCommand(Save);
             _searchCommand = new RelayCommand(Search);
             _updateCommand = new RelayCommand(Update);
@@ -47,17 +49,18 @@ namespace Organization_WPF.ViewModels
         }
         #endregion
 
-        private ObservableCollection<Person> _personCollection;
+        private  ObservableCollection<Person> _personCollection;
 
-        public ObservableCollection<Person> PersonCollection
+        public  ObservableCollection<Person> PersonCollection
         {
             get { return _personCollection; }
-            set { _personCollection = value; OnPropertyChanged("PersonCollection"); }
+            set { _personCollection = value; OnPropertyChanged("PersonCollection");  }
         }
 
-        private void LoadData()
+        public void PSCollectionChanged(object sender, EventArgs e)
         {
-            PersonCollection = PersonService.GetAll();
+            //refresh collection
+            PersonCollection = PersonService.PersonList; 
         }
 
         private Person _currentPerson;

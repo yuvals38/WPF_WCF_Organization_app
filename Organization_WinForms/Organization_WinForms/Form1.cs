@@ -111,8 +111,7 @@ namespace Organization_WinForms
 
             txtID.Text = e.Row.Cells[0].Value.ToString();
             txtName.Text = e.Row.Cells[1].Value.ToString();
-
-            cmbRoles.SelectedItem = e.Row.Cells[2].Value.ToString();
+            cmbRoles.SelectedItem = (Roles)Enum.Parse(typeof(Roles), e.Row.Cells[2].Value.ToString()); 
             
         }
 

@@ -3,32 +3,50 @@ using Organization_WPF.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Organization_WPF.Models
 {
-    public class PersonService : ObservableCollection<Person>
+    public class PersonService : ObservableCollection<Person>, INotifyPropertyChanged
     {
-        private static ObservableCollection<Person> _personsList;
-        public static ObservableCollection<Person> PersonList
+
+        // event colection changed
+        public event EventHandler PersonServiceCollectionChanged;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+        //event subscribe to controller
+        private  ObservableCollection<Person> _personsList;
+        public  ObservableCollection<Person> PersonList
         {
             get { return _personsList; }
-            set { _personsList = value; }
+            set { _personsList = value; OnPropertyChanged("PersonList");  }
         }
 
         public PersonService()
         {
+            Controller.Controller.Instance.CollectionChanged += PersonCollectionChanged;
             _personsList = Controller.Controller.Instance.data.PersonList;
         }
 
-      
+        public void PersonCollectionChanged(object sender, EventArgs e)
+        {
+             //refresh collection
+            PersonList = Controller.Controller.Instance.data.PersonList;
+            PersonServiceCollectionChanged(this, null);
+        }
 
         public ObservableCollection<Person> GetAll()
         {
-            PersonViewModel pvm = new PersonViewModel();
-            pvm.PersonCollection = _personsList;
+            //PersonViewModel pvm = new PersonViewModel();
+            //pvm.PersonCollection = _personsList;
             return _personsList;
         }
 

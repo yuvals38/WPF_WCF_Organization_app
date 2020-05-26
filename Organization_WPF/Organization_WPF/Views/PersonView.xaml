@@ -52,7 +52,7 @@ xmlns:System="clr-namespace:System;assembly=mscorlib">
         </StackPanel>
         <TextBlock Name="txtMessage" Text="{Binding Message}" Grid.Row="5" Grid.Column="1" Foreground="Green" Padding="3" HorizontalAlignment="Left" />
 
-        <TextBlock Name="txtClientCounter" Text="{Binding ClientCounter}" Grid.Row="5" Grid.Column="1" Foreground="Green" Padding="3" HorizontalAlignment="Right"/>
+        <!--<TextBlock Name="txtClientCounter" Text="{Binding ClientCounter}" Grid.Row="5" Grid.Column="1" Foreground="Green" Padding="3" HorizontalAlignment="Right"/>-->
 
         <DataGrid Name="dPersons" SelectedItem="{Binding SelectedPerson}" ItemsSource="{Binding PersonCollection,Mode=TwoWay}" AutoGenerateColumns="False"
                   Grid.Row="6" Grid.Column="1" Margin="5,8" >
@@ -67,7 +67,7 @@ xmlns:System="clr-namespace:System;assembly=mscorlib">
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="SEND DATA" Name="btnSend" Command="{Binding DataContext.SendCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                            <Button Content="SEND DATA" Name="btnSend" Command="{Binding DataContext.SendCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" Background="Green" Foreground="White" Padding="3"
                                     Visibility="{Binding IsSelected, Converter={StaticResource BooleanToVisibilityConverter},
                                                     RelativeSource={RelativeSource FindAncestor, AncestorType=DataGridRow}}"/>
                         </DataTemplate>

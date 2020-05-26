@@ -17,6 +17,9 @@ namespace Organization_WPF.Controller
         static Controller instance = null;
         static readonly object padlock = new object();
         public Data data;
+        
+        // event colection changed
+        public event EventHandler CollectionChanged;
 
         private int _clientc;
         public int ClientC
@@ -62,14 +65,11 @@ namespace Organization_WPF.Controller
             // if (data == null)
             //data = new Data();
             data.xmlGet();
-
-            PersonService ps = new PersonService();
-            ps.GetAll();
-            //PersonService.PersonList = data.PersonList;
+            CollectionChanged(this, null);
             return data.PersonList;
 
-            
         }
+
 
         public void SendData(Person person)
         {

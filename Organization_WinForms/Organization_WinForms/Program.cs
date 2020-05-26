@@ -25,14 +25,6 @@ namespace Organization_WinForms
             Application.Run(new Form1());
 
 
-            ////connect to the service
-            //ServiceCallBack callback = new ServiceCallBack();
-            //InstanceContext instanceContext = new InstanceContext(callback);
-            //var client = new Organization_Service.ServiceClient(instanceContext);
-            //client.OpenSession();
-
-            //ServiceProvider clientconnect = new ServiceProvider();//clientConnected = client;
-            //clientconnect.ClientConnected = client;
 
         }
     }

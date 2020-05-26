@@ -24,3 +24,16 @@ C:\Users\yuval.s\Source\Repos\Assessment\Organization_WinForms\Organization_WinF
 C:\Users\yuval.s\Source\Repos\Assessment\Organization_WinForms\Organization_WinForms\obj\Debug\Client_Organization_WinForms.csproj.CopyComplete
 C:\Users\yuval.s\Source\Repos\Assessment\Organization_WinForms\Organization_WinForms\obj\Debug\Organization_WinForms.exe
 C:\Users\yuval.s\Source\Repos\Assessment\Organization_WinForms\Organization_WinForms\obj\Debug\Organization_WinForms.pdb
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\bin\Debug\Organization_WinForms.exe.config
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\bin\Debug\Organization_WinForms.exe
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\bin\Debug\Organization_WinForms.pdb
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Client_Organization_WinForms.csprojAssemblyReference.cache
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Organization_WinForms.Form1.resources
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Organization_WinForms.Properties.Resources.resources
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Client_Organization_WinForms.csproj.GenerateResource.cache
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Client_Organization_WinForms.csproj.CoreCompileInputs.cache
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Client_Organization_WinForms.csproj.CopyComplete
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Organization_WinForms.exe
+C:\Users\yuval.s\Source\Repos\Assessment\Organization_app\Organization_WinForms\Organization_WinForms\obj\Debug\Organization_WinForms.pdb

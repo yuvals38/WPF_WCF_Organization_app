@@ -1,6 +1,7 @@
 ﻿using Organization_WPF.Models;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -11,8 +12,9 @@ using System.Xml.Serialization;
 
 namespace Organization_WPF.Controller.DAL
 {
-    public class Data : ObservableCollection<Person>
+    public class Data : ObservableCollection<Person> , INotifyPropertyChanged
     {
+
         public static string  XmlPath =  Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Persons.xml");
         private ObservableCollection<Person> _personList;
         public ObservableCollection<Person> PersonList
@@ -25,12 +27,19 @@ namespace Organization_WPF.Controller.DAL
             {
                 if (_personList == null)
                     return;
-
-
-                _personList = value;
-
+                //notify prop change
+                _personList = value; OnPropertyChanged("PersonList");
+            
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public Data() 
         {
             
