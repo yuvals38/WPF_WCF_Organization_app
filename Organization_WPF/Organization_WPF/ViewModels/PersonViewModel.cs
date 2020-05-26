@@ -60,7 +60,8 @@ namespace Organization_WPF.ViewModels
         public void PSCollectionChanged(object sender, EventArgs e)
         {
             //refresh collection
-            PersonCollection = PersonService.PersonList; 
+            PersonCollection = PersonService.PersonList;
+            Message = "Data recieved from Client";
         }
 
         private Person _currentPerson;

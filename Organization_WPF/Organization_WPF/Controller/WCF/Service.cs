@@ -33,6 +33,8 @@ namespace Organization_WPF.Controller.WCF
             deserialize.DeserializeData(data);
 
             Controller.Instance.data.PersonList = Controller.Instance.PrepareData();
+
+
             
         }
 

@@ -50,7 +50,7 @@ xmlns:System="clr-namespace:System;assembly=mscorlib">
             <Button Name="btnDelete" Command="{Binding DeleteCommand}" Content="DELETE" Margin="5,8" Padding="3,3,3,3"/>
             <!--<Button Name="btnSend" Command="{Binding SendCommand}" Content="SEND DATA" Margin="5,8" Padding="3,3,3,3"/>-->
         </StackPanel>
-        <TextBlock Name="txtMessage" Text="{Binding Message}" Grid.Row="5" Grid.Column="1" Foreground="Green" Padding="3" HorizontalAlignment="Left" />
+        <TextBlock Name="txtMessage" Text="{Binding Message}" Grid.Row="5" Grid.Column="1" Foreground="Green" Padding="3" HorizontalAlignment="Left" FontSize="13" FontWeight="Bold"/>
 
         <!--<TextBlock Name="txtClientCounter" Text="{Binding ClientCounter}" Grid.Row="5" Grid.Column="1" Foreground="Green" Padding="3" HorizontalAlignment="Right"/>-->
 
