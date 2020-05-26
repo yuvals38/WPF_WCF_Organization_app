@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Organization_WPF.Controller.DAL
+namespace Organization_WPF.Models
 {
-    public class DataManagement : IDisposable
+    public class IDmanager : IDisposable
     {
         private static List<bool> UsedCounter = new List<bool>();
         private static object Lock = new object();
 
         public int ID { get; private set; }
 
-        public DataManagement()
+        public IDmanager()
         {
 
             lock (Lock)

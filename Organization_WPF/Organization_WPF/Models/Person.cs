@@ -34,7 +34,7 @@ namespace Organization_WPF.Models
         public int Id
         {
             get { return _id; }
-            set { _id = value; OnPropertyChanged("Id"); }
+            set { _id = new IDmanager().ID; OnPropertyChanged("Id"); }
         }
 
         private string _name;

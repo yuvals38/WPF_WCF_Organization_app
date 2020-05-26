@@ -39,7 +39,7 @@ xmlns:System="clr-namespace:System;assembly=mscorlib">
         <TextBlock Text="Person Name" Grid.Row ="2" Grid.Column="0" Margin="5,8" />
         <TextBlock Text="Person Role" Grid.Row ="3" Grid.Column="0" Margin="5,8" />
 
-        <TextBox Name ="txtID" Text="{Binding CurrentPerson.Id,Mode=TwoWay}" Grid.Row="1" Grid.Column="2" Margin="5,8"/>
+        <TextBox Name ="txtID" Text="{Binding CurrentPerson.Id,Mode=TwoWay}" Grid.Row="1" Grid.Column="2" Margin="5,8" />
         <TextBox Name ="txtName" Text="{Binding CurrentPerson.Name, Mode=TwoWay}" Grid.Row="2" Grid.Column="2" Margin="5,8"/>
         <ComboBox Name ="cmdRoles" SelectedItem="{Binding CurrentPerson.PersonRoles,Mode=TwoWay}" ItemsSource="{Binding Source={StaticResource EnumDataProvider}}" Grid.Row="3" Grid.Column="2" Margin="5,8"/>
 

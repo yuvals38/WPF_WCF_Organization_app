@@ -39,7 +39,7 @@ namespace Organization_WPF.Controller.DAL
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
-
+       // DataManagement dm = new DataManagement();
         public Data() 
         {
             
@@ -76,7 +76,7 @@ namespace Organization_WPF.Controller.DAL
             var docsave =  XDocument.Load(XmlPath);
            
             XElement newPerson = new XElement("Person",
-            new XElement("Id", person.Id),
+            new XElement("Id",person.Id),
             new XElement("Name", person.Name),
             new XElement("PersonRoles", person.PersonRoles));
          

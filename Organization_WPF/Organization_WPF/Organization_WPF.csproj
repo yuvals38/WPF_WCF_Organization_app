@@ -61,7 +61,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\DAL\Data.cs" />
-    <Compile Include="Controller\DAL\DataManagement.cs" />
+    <Compile Include="Models\IDmanager.cs" />
     <Compile Include="Controller\DAL\DataTransfer.cs" />
     <Compile Include="Controller\WCF\IService.cs" />
     <Compile Include="Controller\WCF\IServiceCallBack.cs" />
