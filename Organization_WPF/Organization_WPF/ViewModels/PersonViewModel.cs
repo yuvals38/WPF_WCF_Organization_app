@@ -100,7 +100,7 @@ namespace Organization_WPF.ViewModels
             try
             {
                 //set a new id
-                CurrentPerson.Id = new IDmanager().ID;
+                //CurrentPerson.Id = new IDmanager().ID;
                 PersonCollection.Add(CurrentPerson);
                 PersonService.Add(CurrentPerson);
                 
